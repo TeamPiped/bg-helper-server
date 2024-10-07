@@ -1,0 +1,24 @@
+{
+  "name": "bg-helper-server",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "^1.1.10",
+    "@types/jsdom": "^21.1.7"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@elysiajs/server-timing": "^1.1.0",
+    "bgutils-js": "^2.2.0",
+    "elysia": "^1.1.18",
+    "jsdom": "^25.0.1"
+  },
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "build": "bun build src/index.ts --target bun --outdir ./dist",
+    "start": "NODE_ENV=production bun dist/index.js",
+    "test": "bun test"
+  }
+}

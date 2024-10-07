@@ -6,10 +6,12 @@ To install dependencies:
 bun install
 ```
 
-To run:
+To run for development:
 
 ```bash
-bun run index.ts
+bun dev
 ```
 
-This project was created using `bun init` in bun v1.1.24. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+# WIP
+
+This will be a server that can be used to generate PoTokens for use with Piped-Backend.

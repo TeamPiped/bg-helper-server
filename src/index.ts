@@ -3,18 +3,18 @@ import { BG } from "bgutils-js";
 import { JSDOM } from "jsdom";
 import { serverTiming } from "@elysiajs/server-timing";
 
+const dom = new JSDOM();
+
+Object.assign(globalThis, {
+	window: dom.window,
+	document: dom.window.document,
+});
+
 const app = new Elysia()
 	.use(serverTiming())
 	.post(
 		"/generate",
 		async ({ body }) => {
-			const dom = new JSDOM();
-
-			Object.assign(globalThis, {
-				window: dom.window,
-				document: dom.window.document,
-			});
-
 			const bgConfig = {
 				fetch: (url: any, options: any) => fetch(url, options),
 				globalObj: globalThis,

@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@elysiajs/server-timing": "^1.1.0",
-    "bgutils-js": "^2.2.0",
+    "bgutils-js": "^3.0.0",
     "elysia": "^1.1.18",
     "jsdom": "^25.0.1"
   },

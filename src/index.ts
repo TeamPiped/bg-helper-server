@@ -14,33 +14,33 @@ const app = new Elysia()
 	.use(serverTiming())
 	.post(
 		"/generate",
-		async ({ body }) => {
+		async ({ body: { visitorData, requestKey } }) => {
 			const bgConfig = {
 				fetch: (url: any, options: any) => fetch(url, options),
 				globalObj: globalThis,
-				identifier: body.visitorData,
-				requestKey: body.requestKey,
+				identifier: visitorData,
+				requestKey,
 			};
 
 			const challenge = await BG.Challenge.create(bgConfig);
 
 			if (!challenge) throw new Error("Could not get challenge");
 
-			if (challenge.script) {
-				const script = challenge.script.find((sc) => sc !== null);
-				if (script) new Function(script)();
-			} else {
-				console.warn("Unable to load Botguard.");
-			}
+			const script = challenge.interpreterJavascript.privateDoNotAccessOrElseSafeScriptWrappedValue;
+			if (!script) throw new Error("Could not load VM");
+			new Function(script)();
 
-			const poToken = await BG.PoToken.generate({
-				program: challenge.challenge,
+			const poTokenRes = await BG.PoToken.generate({
+				program: challenge.program,
 				globalName: challenge.globalName,
 				bgConfig,
 			});
 
+			BG.PoToken.generatePlaceholder(visitorData);
+
 			return {
-				poToken: poToken,
+				poToken: poTokenRes.poToken,
+				visitorData,
 			};
 		},
 		{

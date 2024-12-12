@@ -1,0 +1,16 @@
+.git/
+.github/
+
+node_modules/
+dist/
+
+.dockerignore
+.gitignore
+
+Dockerfile
+
+LICENSE
+
+*.node_modules
+
+renovate.json

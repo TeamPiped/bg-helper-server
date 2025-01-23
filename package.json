@@ -10,7 +10,7 @@
     "@elysiajs/server-timing": "^1.2.0",
     "bgutils-js": "^3.1.2",
     "elysia": "^1.1.26",
-    "jsdom": "^25.0.1"
+    "jsdom": "^26.0.0"
   },
   "scripts": {
     "dev": "bun --watch src/index.ts",

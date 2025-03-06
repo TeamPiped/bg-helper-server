@@ -9,7 +9,7 @@
   "dependencies": {
     "@elysiajs/server-timing": "^1.2.1",
     "bgutils-js": "^3.2.0",
-    "elysia": "^1.2.24",
+    "elysia": "^1.2.25",
     "jsdom": "^26.0.0"
   },
   "scripts": {

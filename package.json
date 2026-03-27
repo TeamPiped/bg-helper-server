@@ -14,7 +14,7 @@
   },
   "scripts": {
     "dev": "bun --watch src/index.ts",
-    "build": "bun build src/index.ts --target bun --outdir ./dist",
+    "build": "bun build src/index.ts --target bun --outdir ./dist --external css-tree",
     "build-native": "bun build src/index.ts --compile --outfile ./dist/bg-helper-server",
     "start": "NODE_ENV=production bun dist/index.js",
     "test": "bun test"

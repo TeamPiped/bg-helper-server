@@ -7,7 +7,7 @@
     "@types/jsdom": "^28.0.1"
   },
   "dependencies": {
-    "@elysiajs/server-timing": "^1.4.0",
+    "@elysiajs/server-timing": "^1.4.1",
     "bgutils-js": "^3.2.0",
     "elysia": "^1.4.28",
     "jsdom": "^29.0.2"

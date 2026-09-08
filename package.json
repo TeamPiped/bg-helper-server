@@ -4,13 +4,13 @@
   "type": "module",
   "devDependencies": {
     "@types/bun": "^1.4.2",
-    "@types/jsdom": "^28.0.3"
+    "@types/jsdom": "^30.0.0"
   },
   "dependencies": {
     "@elysiajs/server-timing": "^1.4.1",
     "bgutils-js": "^3.2.0",
     "elysia": "^1.4.30",
-    "jsdom": "^29.1.1"
+    "jsdom": "^30.0.1"
   },
   "scripts": {
     "dev": "bun --watch src/index.ts",

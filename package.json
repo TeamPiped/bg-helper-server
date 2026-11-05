@@ -4,7 +4,7 @@
   "type": "module",
   "devDependencies": {
     "@types/bun": "^1.4.4",
-    "@types/jsdom": "^28.0.3"
+    "@types/jsdom": "^30.0.0"
   },
   "dependencies": {
     "@elysiajs/server-timing": "^1.4.1",
